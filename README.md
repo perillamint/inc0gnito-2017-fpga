@@ -1,4 +1,4 @@
-# Inc0gnito CTF 2017 - 
+# Inc0gnito CTF 2017 - D80C010-F
 
 ## Note
 이 문제의 출력은, 난이도 조정을 위해 `INC0{.*}` 포멧을 따르지 않습니다.<br>
