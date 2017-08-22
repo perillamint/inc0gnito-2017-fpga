@@ -7,7 +7,7 @@ module top (clk, key, data);
    
    always@(posedge clk)
      begin
-        if (key == 'h9DA79FF0)
+        if (key == 'h4C6F7452)
           begin
              buffer <= 'h00464C45;
           end
