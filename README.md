@@ -9,7 +9,7 @@
 key 포트에 들어간 문자열과, data 포트에 들어간 문자열을 이어 붙인 것이 문제의 flag 입니다. (예: key = ABCD, data = qwer 일 때 flag 는 ABCDqwer)
 
 ## 칩 설명
-이 칩은 key 포트로 32바이트 키를 받아, clk 신호가 posedge 일 때, 칩 내부의 키와 key 포트의 값을 비교해, 일치하면 data 포트로 문제의 flag를 내보내는 칩입니다.
+이 칩은 key 포트로 32바이트 키를 받아, clk 신호가 posedge 일 때, 칩 내부의 키와 key 포트의 값을 비교해, 일치하면 data 포트로 숨겨진 값을 내보내는 칩입니다.
 
 ## key 조건
 * Key 는 4바이트 문자열이거나, Null-terminated string 입니다. (예: 41424300 => ABC)
