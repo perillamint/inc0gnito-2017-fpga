@@ -41,3 +41,11 @@ flycheck_*.el
 *.bin
 *.blif
 *.rpt
+*.swp
+*.vvp
+*.vcd
+
+result.lsp
+result.txt
+data.txt
+key.txt
