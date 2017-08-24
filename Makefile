@@ -15,7 +15,7 @@ SIMFLAGS := -v
 
 SRCS = $(wildcard *.v)
 TBSRCS = $(filter %_tb.v, $(SRCS))
-MODSRCS = $(filter-out %_tb.v %_incl.v, $(SRCS))
+MODSRCS = $(filter-out %_tb.v %_incl.v inc0gnito_rev.v, $(SRCS))
 VVPS = $(patsubst %.v,%.vvp,$(TBSRCS))
 VCDS = $(patsubst %_tb.v,%_wave.vcd,$(TBSRCS))
 
@@ -44,11 +44,14 @@ $(BINS): %.bin: %.asc
 $(RPTS): %.rpt: %.asc
 	icetime -d $(DEVICE) -mtr $@ $<
 
-$(VVPS): %.vvp: %.v $(MODSRCS)
+$(VVPS): %.vvp: %.v $(MODSRCS) inc0gnito_rev.v
 	$(SIMCOMPILER) $(SIMCOMPFLAGS) -o $@ $^
 
 $(VCDS): %_wave.vcd: %_tb.vvp
 	$(SIMULATOR) $(SIMFLAGS) $<
 
+inc0gnito_rev.v: $(PIN_DEF) inc0gnito.asc
+	icebox_vlog -s -S -p inc0gnito.pcf inc0gnito.asc > inc0gnito_rev.v
+
 clean:
-	rm $(wildcard *.vvp) $(wildcard *.vcd) $(BLIFS) $(BINS) $(RPTS) $(ASCS)
+	rm $(wildcard *.vvp) $(wildcard *.vcd) $(BLIFS) $(BINS) $(RPTS) $(ASCS) inc0gnito_rev.v
