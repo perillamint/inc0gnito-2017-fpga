@@ -19,14 +19,14 @@ module testbench;
       clk <= 0;
       #250
 
-      key <= 'h9DA79FF0;
+      key <= 'h4C6F7452;
       #250;
       clk <= 1;
       #250;
       clk <= 0;
       #250;
 
-      key <= 'h9DA79FF1;
+      key <= 'h4C6F7453;
       #250;
       clk <= 1;
       #250;
