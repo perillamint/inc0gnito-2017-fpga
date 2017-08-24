@@ -23,3 +23,8 @@ key 포트에 들어간 문자열과, data 포트에 들어간 문자열을 이�
 ## Hints
 * SiliconBlue
 * Lattice
+
+## Errata
+Key 의 Byte order 는 순서대로지만 Data 의 byte order 는 역순임을 발견했습니다. (ex: key = 41424344 data = 48474645 일 때 flag = `INC0{ABCDEFGH}`)
+
+이 점 유의하여 풀어 주시기 바랍니다.
