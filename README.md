@@ -28,3 +28,6 @@ key 포트에 들어간 문자열과, data 포트에 들어간 문자열을 이�
 Key 의 Byte order 는 순서대로지만 Data 의 byte order 는 역순임을 발견했습니다. (ex: key = 41424344 data = 48474645 일 때 flag = `INC0{ABCDEFGH}`)
 
 이 점 유의하여 풀어 주시기 바랍니다.
+
+## License notice
+Shenzhen I/O 게임 매뉴얼이 출처인 D80C010-F.pdf 와 D80C010-F.odg 를 제외한, 모든 코드는 Apache 2.0 라이센스 하에 배포됩니다.
